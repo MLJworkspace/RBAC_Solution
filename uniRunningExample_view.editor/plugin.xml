@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated uniRunningExample_view -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="uniRunningExample_view.presentation.UniRunningExample_viewModelWizardID"
+            name="%_UI_UniRunningExample_viewModelWizard_label"
+            class="uniRunningExample_view.presentation.UniRunningExample_viewModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/UniRunningExample_viewModelFile.gif">
+         <description>%_UI_UniRunningExample_viewModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated uniRunningExample_view -->
+      <editor
+            id="uniRunningExample_view.presentation.UniRunningExample_viewEditorID"
+            name="%_UI_UniRunningExample_viewEditor_label"
+            icon="icons/full/obj16/UniRunningExample_viewModelFile.gif"
+            extensions="unirunningexample_view"
+            class="uniRunningExample_view.presentation.UniRunningExample_viewEditor"
+            contributorClass="uniRunningExample_view.presentation.UniRunningExample_viewActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

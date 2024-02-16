@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<accessControlMetamodel:AccessControlModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:accessControlMetamodel="http://www.example.org/accessControlMetamodel" name="uniRunningExample_view_Project Manager" role="Project Manager">
+  <eclasspermissions name="Project">
+    <eClass href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project"/>
+    <permissions>Create</permissions>
+    <permissions>Read</permissions>
+    <permissions>Update</permissions>
+    <permissions>Delete</permissions>
+    <eattributepermissions name="projectName">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project/projectName"/>
+    </eattributepermissions>
+    <eattributepermissions name="fundingAgency">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project/fundingAgency"/>
+    </eattributepermissions>
+    <eattributepermissions name="projectDuration">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project/projectDuration"/>
+    </eattributepermissions>
+    <ereferencepermissions name="partner">
+      <permissions>Create</permissions>
+      <permissions>Read</permissions>
+      <permissions>Delete</permissions>
+      <eReference href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project/partner"/>
+    </ereferencepermissions>
+    <ereferencepermissions name="projectEmployee">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eReference href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Project/projectEmployee"/>
+    </ereferencepermissions>
+  </eclasspermissions>
+  <eclasspermissions name="Department">
+    <eClass href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Department"/>
+    <permissions>Read</permissions>
+    <permissions>Update</permissions>
+    <eattributepermissions name="depName">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Department/depName"/>
+    </eattributepermissions>
+    <ereferencepermissions name="project">
+      <permissions>Create</permissions>
+      <permissions>Read</permissions>
+      <permissions>Delete</permissions>
+      <eReference href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Department/project"/>
+    </ereferencepermissions>
+    <ereferencepermissions name="employee">
+      <permissions>Read</permissions>
+      <eReference href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Department/employee"/>
+    </ereferencepermissions>
+  </eclasspermissions>
+  <eclasspermissions name="Partner">
+    <eClass href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Partner"/>
+    <permissions>Create</permissions>
+    <permissions>Read</permissions>
+    <permissions>Update</permissions>
+    <permissions>Delete</permissions>
+    <eattributepermissions name="partnerName">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Partner/partnerName"/>
+    </eattributepermissions>
+    <eattributepermissions name="partnerType">
+      <permissions>Read</permissions>
+      <permissions>Update</permissions>
+      <permissions>Delete</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Partner/partnerType"/>
+    </eattributepermissions>
+  </eclasspermissions>
+  <eclasspermissions name="Employee">
+    <eClass href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Employee"/>
+    <permissions>Read</permissions>
+    <eattributepermissions name="empName">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Employee/empName"/>
+    </eattributepermissions>
+    <eattributepermissions name="empSurname">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Employee/empSurname"/>
+    </eattributepermissions>
+    <eattributepermissions name="empExpertise">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//Employee/empExpertise"/>
+    </eattributepermissions>
+  </eclasspermissions>
+  <eclasspermissions name="University">
+    <eClass href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//University"/>
+    <permissions>Read</permissions>
+    <eattributepermissions name="uniName">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//University/uniName"/>
+    </eattributepermissions>
+    <eattributepermissions name="uniAddress">
+      <permissions>Read</permissions>
+      <eAttribute href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//University/uniAddress"/>
+    </eattributepermissions>
+    <ereferencepermissions name="department">
+      <permissions>Read</permissions>
+      <eReference href="../../../../runtime-AccessControlSolution/uniRunningExample_view/model/uniRunningExample_view.ecore#//University/department"/>
+    </ereferencepermissions>
+  </eclasspermissions>
+</accessControlMetamodel:AccessControlModel>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="org.mde.views.contribution1"
+            nameFilter="*.ecore">
+         <menu
+               label="Views"
+               path="additions"
+               id="org.mde.views.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+        <!--  <action
+               label="Generate View"
+               class="org.mde.views.popup.actions.Generation"
+               menubarPath="org.mde.views.menu1/group1"
+               enablesFor="1"
+               id="org.mde.views.generate"> 
+         </action> -->
+      	 <action
+               class="org.mde.views.popup.actions.Selection"
+               enablesFor="1"
+               id="org.mde.views.selection"
+               label="Create View"
+               menubarPath="org.mde.views.menu1/group1">
+         </action>
+          <menu
+               label="Users/Roles"
+               path="additions"
+               id="org.mde.views.menu2">
+            <separator
+                  name="group2">
+            </separator>
+         </menu>
+         <action
+               class="org.mde.views.popup.actions.Users"
+               enablesFor="1"
+               id="org.mde.views.users"
+               label="Users"
+               menubarPath="org.mde.views.menu2/group2">
+         </action>
+         <action
+               class="org.mde.views.popup.actions.Roles"
+               enablesFor="1"
+               id="org.mde.views.roles"
+               label="Roles"
+               menubarPath="org.mde.views.menu2/group2">
+         </action>
+         <menu
+               label="Login"
+               path="additions"
+               id="org.mde.views.menu3">
+            <separator
+                  name="group3">
+            </separator>
+         </menu>
+         <action
+               class="org.mde.views.popup.actions.Login"
+               enablesFor="1"
+               id="org.mde.views.login"
+               label="Login"
+               menubarPath="org.mde.views.menu3/group3">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/UniRunningExample/src-gen" creationIcons="false"
+    editDirectory="/UniRunningExample.edit/src-gen" editorDirectory="/UniRunningExample.editor/src-gen"
+    modelPluginID="UniRunningExample" modelName="UniRunningExample" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>uniRunningExample.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="UniRunningExample" disposableProviderFactory="true" ecorePackage="uniRunningExample.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uniRunningExample.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="uniRunningExample.ecore#//Type/INDUSTRIAL"/>
+      <genEnumLiterals ecoreEnumLiteral="uniRunningExample.ecore#//Type/ACADEMIC"/>
+    </genEnums>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Course/courseName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Course/courseCode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Course/teacher"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Project/partner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Project/projectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Project/fundingAgency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Project/projectDuration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Project/projectEmployee"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Department">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Department/project"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Department/depName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Department/employee"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Department/program"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Partner">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Partner/partnerName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Partner/partnerType"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Program/programName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Program/programCode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//Program/course"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//Employee">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Employee/empName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Employee/empSurname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//Employee/empExpertise"/>
+    </genClasses>
+    <genClasses ecoreClass="uniRunningExample.ecore#//University">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uniRunningExample.ecore#//University/department"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//University/uniName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uniRunningExample.ecore#//University/uniAddress"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

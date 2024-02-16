@@ -1,0 +1,179 @@
+modeltype uniRunningExample_view uses 'http://www.example.org/uniRunningExample_view';
+modeltype uniRunningExample uses 'http://www.example.org/uniRunningExample';
+
+transformation uniRunningExample_view2uniRunningExample( in uniRunningExample_viewModel:uniRunningExample_view , inout uniRunningExampleModel:uniRunningExample);
+main() {
+uniRunningExampleModel.rootObjects()[uniRunningExample::University] -> map University2University();
+}
+
+
+mapping uniRunningExample :: Project :: Project2Project() : uniRunningExample :: Project{
+init{
+    result := self;
+}
+if (uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Project)->exists(ProjectViewOb | ProjectViewOb.projectName = self.projectName)) then {
+var ProjectViewOb1 := uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Project)->selectOne(ProjectViewOb | ProjectViewOb.projectName = self.projectName);
+    result.projectName := ProjectViewOb1.projectName;
+    result.fundingAgency := ProjectViewOb1.fundingAgency;
+    result.projectDuration := ProjectViewOb1.projectDuration;
+    //addition
+    ProjectViewOb1.projectEmployee -> forEach(viewEmployee){
+       if(uniRunningExampleModel.objectsOfType(uniRunningExample :: Employee)->exists(baseEmployee | baseEmployee.empSurname = viewEmployee.empSurname)){
+           var varEmployee := uniRunningExampleModel.objectsOfType(uniRunningExample :: Employee)->selectOne(baseEmployee | baseEmployee.empSurname = viewEmployee.empSurname);
+           result.projectEmployee += varEmployee;
+        }
+        endif;
+    };
+    //removal
+    self.projectEmployee -> forEach(baseEmployee){
+       if((ProjectViewOb1.projectEmployee->exists(viewEmployee | viewEmployee.empSurname = baseEmployee.empSurname)) = false) {
+           result.projectEmployee := self.projectEmployee -> excluding(baseEmployee);
+       }
+        endif;
+    };
+   uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Project)->forOne(ProjectViewOb | ProjectViewOb.projectName = self.projectName){
+       ProjectViewOb.partner->forEach(partnerViewOb){
+           //addition
+           if((self.partner-> exists (partnerBaseOb |partnerBaseOb.partnerName = partnerViewOb.partnerName)) = false){
+              var partnerOb := object uniRunningExample :: Partner{
+              partnerName := partnerViewOb.partnerName;
+              };
+              result.partner+=partnerOb;
+           }
+           //update
+           else if((self.partner-> exists (partnerBaseOb |partnerBaseOb.partnerName = partnerViewOb.partnerName)) = true){
+              result.partner := self.partner -> map Partner2Partner();
+           }
+       };
+       //delete
+       self.partner -> forEach(PartnerBaseOb){
+            if((ProjectViewOb.partner-> exists(partnerViewOb | partnerViewOb.partnerName = PartnerBaseOb.partnerName)) = false){
+                 result.partner:= self.partner-> excluding(PartnerBaseOb);
+            }
+       };
+   }
+}
+endif;
+}
+
+
+mapping uniRunningExample :: Department :: Department2Department() : uniRunningExample :: Department{
+init{
+    result := self;
+}
+if (uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Department)->exists(DepartmentViewOb | DepartmentViewOb.depName = self.depName)) then {
+var DepartmentViewOb1 := uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Department)->selectOne(DepartmentViewOb | DepartmentViewOb.depName = self.depName);
+    result.depName := DepartmentViewOb1.depName;
+   uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Department)->forOne(DepartmentViewOb | DepartmentViewOb.depName = self.depName){
+       DepartmentViewOb.project->forEach(projectViewOb){
+           //addition
+           if((self.project-> exists (projectBaseOb |projectBaseOb.projectName = projectViewOb.projectName)) = false){
+              var projectOb := object uniRunningExample :: Project{
+              projectName := projectViewOb.projectName;
+              fundingAgency := projectViewOb.fundingAgency;
+              projectDuration := projectViewOb.projectDuration;
+              };
+              result.project+=projectOb;
+           }
+           //update
+           else if((self.project-> exists (projectBaseOb |projectBaseOb.projectName = projectViewOb.projectName)) = true){
+              result.project := self.project -> map Project2Project();
+           }
+       };
+       //delete
+       self.project -> forEach(ProjectBaseOb){
+            if((DepartmentViewOb.project-> exists(projectViewOb | projectViewOb.projectName = ProjectBaseOb.projectName)) = false){
+                 result.project:= self.project-> excluding(ProjectBaseOb);
+            }
+       };
+       DepartmentViewOb.employee->forEach(employeeViewOb){
+           //addition
+           if((self.employee-> exists (employeeBaseOb |employeeBaseOb.empSurname = employeeViewOb.empSurname)) = false){
+              var employeeOb := object uniRunningExample :: Employee{
+              empName := employeeViewOb.empName;
+              empSurname := employeeViewOb.empSurname;
+              empExpertise := employeeViewOb.empExpertise;
+              };
+              result.employee+=employeeOb;
+           }
+           //update
+           else if((self.employee-> exists (employeeBaseOb |employeeBaseOb.empSurname = employeeViewOb.empSurname)) = true){
+              result.employee := self.employee -> map Employee2Employee();
+           }
+       };
+       //delete
+       self.employee -> forEach(EmployeeBaseOb){
+            if((DepartmentViewOb.employee-> exists(employeeViewOb | employeeViewOb.empSurname = EmployeeBaseOb.empSurname)) = false){
+                 result.employee:= self.employee-> excluding(EmployeeBaseOb);
+            }
+       };
+   }
+}
+endif;
+}
+
+
+mapping uniRunningExample :: Partner :: Partner2Partner() : uniRunningExample :: Partner{
+init{
+    result := self;
+}
+if (uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Partner)->exists(PartnerViewOb | PartnerViewOb.partnerName = self.partnerName)) then {
+var PartnerViewOb1 := uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Partner)->selectOne(PartnerViewOb | PartnerViewOb.partnerName = self.partnerName);
+    result.partnerName := PartnerViewOb1.partnerName;
+    if(PartnerViewOb1.partnerType = uniRunningExample_view :: Type :: INDUSTRIAL){
+        result.partnerType := uniRunningExample :: Type :: INDUSTRIAL;
+    }; 
+    if(PartnerViewOb1.partnerType = uniRunningExample_view :: Type :: ACADEMIC){
+        result.partnerType := uniRunningExample :: Type :: ACADEMIC;
+    }; 
+}
+endif;
+}
+
+
+mapping uniRunningExample :: Employee :: Employee2Employee() : uniRunningExample :: Employee{
+init{
+    result := self;
+}
+if (uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Employee)->exists(EmployeeViewOb | EmployeeViewOb.empSurname = self.empSurname)) then {
+var EmployeeViewOb1 := uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: Employee)->selectOne(EmployeeViewOb | EmployeeViewOb.empSurname = self.empSurname);
+    result.empName := EmployeeViewOb1.empName;
+    result.empSurname := EmployeeViewOb1.empSurname;
+    result.empExpertise := EmployeeViewOb1.empExpertise;
+}
+endif;
+}
+
+
+mapping uniRunningExample :: University :: University2University() : uniRunningExample :: University{
+init{
+    result := self;
+}
+if (uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: University)->exists(UniversityViewOb | UniversityViewOb.uniName = self.uniName)) then {
+var UniversityViewOb1 := uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: University)->selectOne(UniversityViewOb | UniversityViewOb.uniName = self.uniName);
+    result.uniName := UniversityViewOb1.uniName;
+    result.uniAddress := UniversityViewOb1.uniAddress;
+   uniRunningExample_viewModel.objectsOfType(uniRunningExample_view :: University)->forOne(UniversityViewOb | UniversityViewOb.uniName = self.uniName){
+       UniversityViewOb.department->forEach(departmentViewOb){
+           //addition
+           if((self.department-> exists (departmentBaseOb |departmentBaseOb.depName = departmentViewOb.depName)) = false){
+              var departmentOb := object uniRunningExample :: Department{
+              depName := departmentViewOb.depName;
+              };
+              result.department+=departmentOb;
+           }
+           //update
+           else if((self.department-> exists (departmentBaseOb |departmentBaseOb.depName = departmentViewOb.depName)) = true){
+              result.department := self.department -> map Department2Department();
+           }
+       };
+       //delete
+       self.department -> forEach(DepartmentBaseOb){
+            if((UniversityViewOb.department-> exists(departmentViewOb | departmentViewOb.depName = DepartmentBaseOb.depName)) = false){
+                 result.department:= self.department-> excluding(DepartmentBaseOb);
+            }
+       };
+   }
+}
+endif;
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_IXtkgCrvEeCckppAb061iQ" type="Ecore" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_IaPUECrvEeCckppAb061iQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IaPUEirvEeCckppAb061iQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUEyrvEeCckppAb061iQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUFCrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUFSrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUFirvEeCckppAb061iQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUFyrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUGCrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUGSrvEeCckppAb061iQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUGirvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUGyrvEeCckppAb061iQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="EclipseView_MM.ecore#_u9nIsCruEeCckppAb061iQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IaPUESrvEeCckppAb061iQ" x="350" y="50" width="106" height="91"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_IaPUHCrvEeCckppAb061iQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IaPUHirvEeCckppAb061iQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUHyrvEeCckppAb061iQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUICrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUISrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUIirvEeCckppAb061iQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUIyrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUJCrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUJSrvEeCckppAb061iQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUJirvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUJyrvEeCckppAb061iQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="EclipseView_MM.ecore#_u9wSoyruEeCckppAb061iQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IaPUHSrvEeCckppAb061iQ" x="345" y="205" width="121" height="101"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_IaPUKCrvEeCckppAb061iQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IaPUKirvEeCckppAb061iQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUKyrvEeCckppAb061iQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPULCrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPULSrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPULirvEeCckppAb061iQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPULyrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUMCrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUMSrvEeCckppAb061iQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUMirvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUMyrvEeCckppAb061iQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="EclipseView_MM.ecore#_u9wSqyruEeCckppAb061iQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IaPUKSrvEeCckppAb061iQ" x="740" y="205" width="121" height="91"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_IaPUNCrvEeCckppAb061iQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IaPUNirvEeCckppAb061iQ" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUNyrvEeCckppAb061iQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUOCrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUOSrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUOirvEeCckppAb061iQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUOyrvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUPCrvEeCckppAb061iQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IaPUPSrvEeCckppAb061iQ" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IaPUPirvEeCckppAb061iQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IaPUPyrvEeCckppAb061iQ"/>
+    </children>
+    <element xmi:type="ecore:EClass" href="EclipseView_MM.ecore#_u96DoCruEeCckppAb061iQ"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IaPUNSrvEeCckppAb061iQ" x="735" y="365" width="131" height="91"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_IXtkgSrvEeCckppAb061iQ"/>
+  <element xmi:type="ecore:EPackage" href="EclipseView_MM.ecore#_k_Et4CrsEeCckppAb061iQ"/>
+  <edges xmi:type="notation:Connector" xmi:id="_zdW1ACrvEeCckppAb061iQ" type="4002" source="_IaPUECrvEeCckppAb061iQ" target="_IaPUHCrvEeCckppAb061iQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdW1AyrvEeCckppAb061iQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdW1BCrvEeCckppAb061iQ" x="-11" y="28"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdW1BSrvEeCckppAb061iQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdW1BirvEeCckppAb061iQ" x="-13" y="-16"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdW1ASrvEeCckppAb061iQ"/>
+    <element xmi:type="ecore:EReference" href="EclipseView_MM.ecore#_u9wSoiruEeCckppAb061iQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdW1AirvEeCckppAb061iQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_zdgmACrvEeCckppAb061iQ" type="4002" source="_IaPUHCrvEeCckppAb061iQ" target="_IaPUKCrvEeCckppAb061iQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmAyrvEeCckppAb061iQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmBCrvEeCckppAb061iQ" x="-1" y="-11"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmBSrvEeCckppAb061iQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmBirvEeCckppAb061iQ" x="-3" y="-8"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdgmASrvEeCckppAb061iQ"/>
+    <element xmi:type="ecore:EReference" href="EclipseView_MM.ecore#_u9wSqCruEeCckppAb061iQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdgmAirvEeCckppAb061iQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_zdgmByrvEeCckppAb061iQ" type="4002" source="_IaPUHCrvEeCckppAb061iQ" target="_IaPUKCrvEeCckppAb061iQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmCirvEeCckppAb061iQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmCyrvEeCckppAb061iQ" x="-2" y="-9"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmDCrvEeCckppAb061iQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmDSrvEeCckppAb061iQ" x="-3" y="-12"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdgmCCrvEeCckppAb061iQ"/>
+    <element xmi:type="ecore:EReference" href="EclipseView_MM.ecore#_u9wSqSruEeCckppAb061iQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdgmCSrvEeCckppAb061iQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_826v8CrwEeCckppAb061iQ" id="(0.9669421487603306,0.1188118811881188)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9jeT8CrwEeCckppAb061iQ" id="(0.04132231404958678,0.17582417582417584)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_zdgmDirvEeCckppAb061iQ" type="4003" source="_IaPUHCrvEeCckppAb061iQ" target="_IaPUKCrvEeCckppAb061iQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmESrvEeCckppAb061iQ" type="6002">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmEirvEeCckppAb061iQ" x="-4" y="13"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdgmEyrvEeCckppAb061iQ" type="6004">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdgmFCrvEeCckppAb061iQ" x="7" y="13"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdgmDyrvEeCckppAb061iQ"/>
+    <element xmi:type="ecore:EReference" href="EclipseView_MM.ecore#_u9wSqiruEeCckppAb061iQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdgmECrvEeCckppAb061iQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-CUMECrwEeCckppAb061iQ" id="(0.8347107438016529,0.7920792079207921)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-V1lACrwEeCckppAb061iQ" id="(0.09090909090909091,0.8461538461538461)"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_zdqXACrvEeCckppAb061iQ" type="4002" source="_IaPUKCrvEeCckppAb061iQ" target="_IaPUNCrvEeCckppAb061iQ">
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdqXAyrvEeCckppAb061iQ" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdqXBCrvEeCckppAb061iQ" x="-4" y="28"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_zdqXBSrvEeCckppAb061iQ" type="6003">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zdqXBirvEeCckppAb061iQ" x="-13" y="-16"/>
+    </children>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zdqXASrvEeCckppAb061iQ"/>
+    <element xmi:type="ecore:EReference" href="EclipseView_MM.ecore#_u9wSrCruEeCckppAb061iQ"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zdqXAirvEeCckppAb061iQ" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

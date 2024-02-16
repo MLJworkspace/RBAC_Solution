@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/AccessControlMetamodel/src-gen" creationIcons="false"
+    editDirectory="/AccessControlMetamodel.edit/src-gen" editorDirectory="/AccessControlMetamodel.editor/src-gen"
+    modelPluginID="AccessControlMetamodel" modelName="AccessControlMetamodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" testsDirectory="/AccessControlMetamodel.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>accessControlMetamodel.ecore</foreignModel>
+  <genPackages prefix="AccessControlMetamodel" disposableProviderFactory="true" ecorePackage="accessControlMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="accessControlMetamodel.ecore#//Permissions">
+      <genEnumLiterals ecoreEnumLiteral="accessControlMetamodel.ecore#//Permissions/Create"/>
+      <genEnumLiterals ecoreEnumLiteral="accessControlMetamodel.ecore#//Permissions/Read"/>
+      <genEnumLiterals ecoreEnumLiteral="accessControlMetamodel.ecore#//Permissions/Update"/>
+      <genEnumLiterals ecoreEnumLiteral="accessControlMetamodel.ecore#//Permissions/Delete"/>
+    </genEnums>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//AccessControlModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accessControlMetamodel.ecore#//AccessControlModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accessControlMetamodel.ecore#//AccessControlModel/eClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accessControlMetamodel.ecore#//AccessControlModel/role"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accessControlMetamodel.ecore#//AccessControlModel/eEnum"/>
+    </genClasses>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//EClass">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accessControlMetamodel.ecore#//EClass/eAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accessControlMetamodel.ecore#//EClass/eReference"/>
+    </genClasses>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//EAttribute"/>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//EReference"/>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//EEnum">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference accessControlMetamodel.ecore#//EEnum/eEnumLiteral"/>
+    </genClasses>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//EEnumLiteral"/>
+    <genClasses ecoreClass="accessControlMetamodel.ecore#//ElementPermission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accessControlMetamodel.ecore#//ElementPermission/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute accessControlMetamodel.ecore#//ElementPermission/permissions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

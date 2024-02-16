@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_k_Et4CrsEeCckppAb061iQ"
+    name="EV_MM" nsURI="EV_MM@MDH" nsPrefix="EV_MM">
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_u9nIsCruEeCckppAb061iQ" name="View">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u9wSoCruEeCckppAb061iQ"
+        name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_u9wSoiruEeCckppAb061iQ"
+        name="contains" lowerBound="1" upperBound="-1" eType="#_u9wSoyruEeCckppAb061iQ"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_u9wSoyruEeCckppAb061iQ" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u9wSpCruEeCckppAb061iQ"
+        name="isRoot" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u9wSpiruEeCckppAb061iQ"
+        name="canBeCreated" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_u9wSqCruEeCckppAb061iQ"
+        name="modification" upperBound="-1" eType="#_u9wSqyruEeCckppAb061iQ"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_u9wSqSruEeCckppAb061iQ"
+        name="creation" upperBound="-1" eType="#_u9wSqyruEeCckppAb061iQ"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_u9wSqiruEeCckppAb061iQ"
+        name="defines" upperBound="-1" eType="#_u9wSqyruEeCckppAb061iQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_2SFb4CruEeCckppAb061iQ"
+        name="domainClass" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_u9wSqyruEeCckppAb061iQ" name="Page">
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_u9wSrCruEeCckppAb061iQ"
+        name="contains" upperBound="-1" eType="#_u96DoCruEeCckppAb061iQ" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u9wSrSruEeCckppAb061iQ"
+        name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" xmi:id="_u96DoCruEeCckppAb061iQ" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u96DoSruEeCckppAb061iQ"
+        name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_u96DoyruEeCckppAb061iQ"
+        name="isChangeable" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_UTNtMCrvEeCckppAb061iQ"
+        name="showsFeature" lowerBound="1" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EStructuralFeature"/>
+  </eClassifiers>
+</ecore:EPackage>
