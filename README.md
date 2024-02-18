@@ -1,3 +1,10 @@
+
+
+
+https://github.com/MLJworkspace/RoleBasedAccessControl/assets/75987636/3d1b979a-8ff2-49a1-94d1-418399de839f
+
+
+
 # RoleBasedAccessControl
 This work proposes a dual-layered solution implemented as an open-source Eclipse plugin that leverages the role-based access control policy to ensure the confidentiality and integrity of model information in collaborative modeling environments. The first layer limits stakeholders' access to the shared model based on their specific roles, while the second layer refines this access by restricting manipulations to individual model elements. The proposed solution keeps the security and integrity of shared information intact while streamlining collaboration, ensuring that stakeholders have access to essential information for their contributions.
 
