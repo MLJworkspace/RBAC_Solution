@@ -1,5 +1,5 @@
 # RoleBasedAccessControl
-Role based access control for Ecore-based Metamodels
+This work proposes a dual-layered solution implemented as an open-source Eclipse plugin that leverages the role-based access control policy to ensure the confidentiality and integrity of model information in collaborative modeling environments. The first layer limits stakeholders' access to the shared model based on their specific roles, while the second layer refines this access by restricting manipulations to individual model elements. The proposed solution keeps the security and integrity of shared information intact while streamlining collaboration, ensuring that stakeholders have access to essential information for their contributions.
 
 # Platform and plugins
 The solutions has been implemented using Ecore Modeling Tools Eclipse 2021-03. The additional required plugins are: QVTo and Xtext
