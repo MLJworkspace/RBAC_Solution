@@ -1,8 +1,5 @@
 
-
-
-[JSS_RBAC_Demo](https://github.com/MLJworkspace/RoleBasedAccessControl/assets/75987636/3d1b979a-8ff2-49a1-94d1-418399de839f)
-
+https://github.com/user-attachments/assets/8817b548-d82b-4bee-8813-ecc9449f9ba1
 
 
 # RoleBasedAccessControl
