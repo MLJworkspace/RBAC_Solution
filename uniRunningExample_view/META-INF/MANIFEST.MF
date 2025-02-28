@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: uniRunningExample_view;singleton:=true
+Automatic-Module-Name: uniRunningExample_view
+Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: uniRunningExample_view,
+ uniRunningExample_view.impl,
+ uniRunningExample_view.util
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy

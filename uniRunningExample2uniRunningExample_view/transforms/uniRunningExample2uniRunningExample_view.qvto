@@ -1,0 +1,43 @@
+modeltype uniRunningExample_view uses 'http://www.example.org/uniRunningExample_view';
+modeltype uniRunningExample uses 'http://www.example.org/uniRunningExample';
+
+transformation uniRunningExample2uniRunningExample_view( in uniRunningExampleModel:uniRunningExample, out uniRunningExample_viewModel:uniRunningExample_view);
+main() {
+uniRunningExampleModel.rootObjects()[uniRunningExample::University] -> map University2University();
+}
+mapping uniRunningExample :: Project :: Project2Project() : uniRunningExample_view :: Project
+{
+    result.partner := self.partner -> map Partner2Partner();
+    result.projectName := self.projectName;
+    result.fundingAgency := self.fundingAgency;
+    result.projectDuration := self.projectDuration;
+    result.projectEmployee := self.projectEmployee -> map Employee2Employee();
+}
+mapping uniRunningExample :: Department :: Department2Department() : uniRunningExample_view :: Department
+{
+    result.project := self.project -> map Project2Project();
+    result.depName := self.depName;
+    result.employee := self.employee -> map Employee2Employee();
+}
+mapping uniRunningExample :: Partner :: Partner2Partner() : uniRunningExample_view :: Partner
+{
+    if(self.partnerType = uniRunningExample :: Type :: INDUSTRIAL){
+        result.partnerType := uniRunningExample_view :: Type :: INDUSTRIAL;
+    }; 
+    if(self.partnerType = uniRunningExample :: Type :: ACADEMIC){
+        result.partnerType := uniRunningExample_view :: Type :: ACADEMIC;
+    }; 
+    result.partnerName := self.partnerName;
+}
+mapping uniRunningExample :: Employee :: Employee2Employee() : uniRunningExample_view :: Employee
+{
+    result.empName := self.empName;
+    result.empSurname := self.empSurname;
+    result.empExpertise := self.empExpertise;
+}
+mapping uniRunningExample :: University :: University2University() : uniRunningExample_view :: University
+{
+    result.department := self.department -> map Department2Department();
+    result.uniName := self.uniName;
+    result.uniAddress := self.uniAddress;
+}

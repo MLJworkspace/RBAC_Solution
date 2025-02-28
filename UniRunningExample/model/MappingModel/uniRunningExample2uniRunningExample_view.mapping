@@ -1,0 +1,37 @@
+MappingModel "uniRunningExample2uniRunningExample_view"
+SourceMetamodels { "uniRunningExample" uniRunningExample }
+TargetMetamodels { "uniRunningExample_view" uniRunningExample_view }
+MappingRules {
+	identifier "projectName"
+	source uniRunningExample.Project target uniRunningExample_view.Project {
+		source uniRunningExample.Project.partner target uniRunningExample_view.Project.partner ;
+		source uniRunningExample.Project.projectName target uniRunningExample_view.Project.projectName ;
+		source uniRunningExample.Project.fundingAgency target uniRunningExample_view.Project.fundingAgency ;
+		source uniRunningExample.Project.projectDuration target uniRunningExample_view.Project.projectDuration ;
+		source uniRunningExample.Project.projectEmployee target uniRunningExample_view.Project.projectEmployee
+	} ; identifier "depName"
+	source uniRunningExample.Department target uniRunningExample_view.Department {
+		source uniRunningExample.Department.project target uniRunningExample_view.Department.project ;
+		source uniRunningExample.Department.depName target uniRunningExample_view.Department.depName ;
+		source uniRunningExample.Department.employee target uniRunningExample_view.Department.employee
+	} ; identifier "partnerName"
+	source uniRunningExample.Partner target uniRunningExample_view.Partner {
+		source uniRunningExample.Partner.partnerName target uniRunningExample_view.Partner.partnerName
+	} {
+	statement "if(self.partnerType = uniRunningExample :: Type :: INDUSTRIAL)" {
+		source uniRunningExample.Type :: INDUSTRIAL target uniRunningExample_view.Partner.partnerType
+	} ;
+	statement "if(self.partnerType = uniRunningExample :: Type :: ACADEMIC)" {
+		source uniRunningExample.Type :: ACADEMIC target uniRunningExample_view.Partner.partnerType
+	} } ; identifier "empSurname"
+	source uniRunningExample.Employee target uniRunningExample_view.Employee {
+		source uniRunningExample.Employee.empName target uniRunningExample_view.Employee.empName ;
+		source uniRunningExample.Employee.empSurname target uniRunningExample_view.Employee.empSurname ;
+		source uniRunningExample.Employee.empExpertise target uniRunningExample_view.Employee.empExpertise
+	} ; identifier "uniName"
+	source uniRunningExample.University target uniRunningExample_view.University {
+		source uniRunningExample.University.department target uniRunningExample_view.University.department ;
+		source uniRunningExample.University.uniName target uniRunningExample_view.University.uniName ;
+		source uniRunningExample.University.uniAddress target uniRunningExample_view.University.uniAddress
+	}
+}

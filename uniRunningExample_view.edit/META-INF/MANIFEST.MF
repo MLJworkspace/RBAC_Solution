@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: uniRunningExample_view.edit;singleton:=true
+Automatic-Module-Name: uniRunningExample_view.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: uniRunningExample_view.provider.uniRunningExample_viewEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: uniRunningExample_view.provider
+Require-Bundle: org.eclipse.core.runtime,
+ uniRunningExample_view;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Eclipse-LazyStart: true
+Bundle-ActivationPolicy: lazy

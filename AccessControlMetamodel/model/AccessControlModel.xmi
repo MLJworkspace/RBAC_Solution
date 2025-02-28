@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accessControlMetamodel:AccessControlModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:accessControlMetamodel="http://www.example.org/accessControlMetamodel" xsi:schemaLocation="http://www.example.org/accessControlMetamodel accessControlMetamodel.ecore" name="view">
+  <eClass name="Family">
+    <eClass href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Family"/>
+    <permissions>Read</permissions>
+    <eAtt name="name">
+      <permissions>Read</permissions>
+      <eAttribute href="accessControlMetamodel.ecore#//AccessControlModel/name"/>
+    </eAtt>
+    <eRef name="cars">
+      <permissions>Read</permissions>
+      <permissions>Create</permissions>
+      <eReference href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Family/cars"/>
+    </eRef>
+    <eRef name="members">
+      <permissions>Create</permissions>
+      <eReference href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Family/members"/>
+    </eRef>
+    <eRef name="father">
+      <permissions>Read</permissions>
+      <eReference href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Person/father"/>
+    </eRef>
+  </eClass>
+  <eClass name="Man">
+    <eClass href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Man"/>
+    <permissions>Read</permissions>
+  </eClass>
+  <eClass name="Woman">
+    <eClass href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Woman"/>
+    <permissions>Read</permissions>
+    <permissions>Create</permissions>
+    <eRef name="car">
+      <eReference href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Woman/car"/>
+    </eRef>
+  </eClass>
+  <eClass name="Car">
+    <eClass href="../../org.eclipse.sirius.sample.basicfamily/model/basicfamily.ecore#//Family/cars/@eGenericType"/>
+  </eClass>
+</accessControlMetamodel:AccessControlModel>

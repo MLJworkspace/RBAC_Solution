@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uniRunningExample_view:University xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:uniRunningExample_view="http://www.example.org/uniRunningExample_view" uniName="MDU" uniAddress="UniversityPlan">
+  <department depName="Computer Science and Engineering">
+    <project projectName="BUMBLE" fundingAgency="Vinnova" projectDuration="3" projectEmployee="//@department.0/@employee.1 //@department.0/@employee.2 //@department.0/@employee.0">
+      <partner partnerName="HCL"/>
+      <partner partnerName="VU" partnerType="ACADEMIC"/>
+    </project>
+    <employee empName="Malvina" empSurname="Latifaj" empExpertise="MDE"/>
+    <employee empName="Antonio" empSurname="Cicchetti" empExpertise="MDE"/>
+    <employee empName="Federico" empSurname="Ciccozzi" empExpertise="MDE"/>
+  </department>
+  <department depName="Networked and Embedded Systems">
+    <employee empName="Sara " empSurname="Johnson" empExpertise="ES"/>
+  </department>
+</uniRunningExample_view:University>

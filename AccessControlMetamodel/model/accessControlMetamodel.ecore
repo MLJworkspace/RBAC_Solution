@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="accessControlMetamodel" nsURI="http://www.example.org/accessControlMetamodel"
+    nsPrefix="accessControlMetamodel">
+  <eClassifiers xsi:type="ecore:EClass" name="AccessControlModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eClass" upperBound="-1"
+        eType="#//EClass" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eEnum" upperBound="-1"
+        eType="#//EEnum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EClass" eSuperTypes="#//ElementPermission">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eAttribute" upperBound="-1"
+        eType="#//EAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eReference" upperBound="-1"
+        eType="#//EReference" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EAttribute" eSuperTypes="#//ElementPermission"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EReference" eSuperTypes="#//ElementPermission"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Permissions">
+    <eLiterals name="Create"/>
+    <eLiterals name="Read" value="1"/>
+    <eLiterals name="Update" value="2"/>
+    <eLiterals name="Delete" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EEnum" eSuperTypes="#//ElementPermission">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eEnumLiteral" upperBound="-1"
+        eType="#//EEnumLiteral" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EEnumLiteral" eSuperTypes="#//ElementPermission"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementPermission" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="permissions" upperBound="-1"
+        eType="#//Permissions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+</ecore:EPackage>
